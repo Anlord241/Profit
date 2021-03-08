@@ -1,0 +1,32 @@
+1) Returns an array of all supported states, inside a specified country.
+Each state object contains its English name state (requested by other endpoints)
+Parameters
+country: country's English name, can be found using the respective listing endpoint.
+key
+
+2) Returns an array of all supported countries.
+Each country object contains its English name country (requested by other endpoints)
+Parameters
+key
+
+3) Returns an array of all supported cities, inside a specified state.
+Each city object contains its English name city (requested by other endpoints)
+Parameters
+state: state's English name, can be found using the respective listing endpoint.
+country: country's English name, can be found using the respective listing endpoint.
+key
+
+4) Returns nearest city's data, using a specified set of GPS coordinates.
+Values returned in the object depends on you API plan, please refer to the API page on our website to check which values and level of detail your API plan allows you to access.
+Parameters
+lat: Latitude numerical value, within range [-90, 90].
+lon: Longitude numerical value, within range [-180, 180].
+key
+
+5) Returns specified city's data object.
+Values returned in the object depends on you API plan, please refer to the API page on our website to check which values and level of detail your API plan allows you to access.
+Parameters
+city: city's English name, can be found using the respective listing endpoint.
+state: state's English name, can be found using the respective listing endpoint.
+country: country's English name, can be found using the respective listing endpoint.
+key
