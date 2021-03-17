@@ -1,0 +1,16 @@
+1) Retrieves a list countries with states and provinces
+Required Request Parameters
+key 
+
+2) Calculates the workday (based on country's workweek) that occurs a given number of days after a date.
+Required Request Parameters
+key 
+country
+start: the date (in YYYY-MM-DD format) from which to begin counting.
+days: number of working / business days to advance from start.
+
+3) Retrieves a list public holidays and observances for countries, states and provinces.
+Required Request Parameters
+key
+country
+year

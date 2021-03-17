@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "2093cd4b-e1b3-4534-bd46-dedb6868a10c",
+		"name": "numverify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://apilayer.net/api/validate?access_key=ef0e400886cd0da117db72ee64036edb&number=+375291234567",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "8515a907-ddd8-417b-8a96-a6f8c0ca5367",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "curl -G -d country=\"BY\" -d year=\"2020\" -d pretty\n-d key=\"8515a907-ddd8-417b-8a96-a6f8c0ca5367\" \"https://holidayapi.com/v1/holidays\"",
+					"protocol": "curl -G -d country=\"BY\" -d year=\"2020\" -d pretty\n-d key=\"8515a907-ddd8-417b-8a96-a6f8c0ca5367\" \"https",
+					"host": [
+						"holidayapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"holidays\""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://apilayer.net/api/countries?access_key=ef0e400886cd0da117db72ee64036edb",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://apilayer.net/api/countries?access_key=ef0e400886cd0da117db72ee64036edb",
+					"protocol": "http",
+					"host": [
+						"apilayer",
+						"net"
+					],
+					"path": [
+						"api",
+						"countries"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "ef0e400886cd0da117db72ee64036edb"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://apilayer.net/api/validate?access_key=ef0e400886cd0da117db72ee64036edb&country_code=RU&number=4957556983",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://apilayer.net/api/validate?access_key=ef0e400886cd0da117db72ee64036edb&country_code=RU&number=4957556983",
+					"protocol": "http",
+					"host": [
+						"apilayer",
+						"net"
+					],
+					"path": [
+						"api",
+						"validate"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "ef0e400886cd0da117db72ee64036edb"
+						},
+						{
+							"key": "country_code",
+							"value": "RU"
+						},
+						{
+							"key": "number",
+							"value": "4957556983"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

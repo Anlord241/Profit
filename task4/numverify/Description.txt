@@ -1,0 +1,16 @@
+1) Validate phone number
+Parameters
+access_key
+number
+
+2) The numverify API supports phone number validation for a total of 232 countries (territories) around the world. Using the API's countries endpoint, you may access a comprehensive list of supported areas, including country names and dialling codes.
+Parameters
+access_key
+
+3) If you intend to specify a phone number in its national (local) format, you will be required to provide additional country information, simply by appending your preferred 2-digit country code to the API's country_code parameter and including it in your API request URL.
+
+Parameters
+access_key
+number
+country_code: (US, RU, ...)
+

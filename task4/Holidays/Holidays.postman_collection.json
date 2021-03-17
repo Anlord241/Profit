@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "c4e52149-dbc4-4b1f-aef3-42a9b7f2c553",
+		"name": "Holidays",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://holidayapi.com/v1/countries?key=9c7edf3a-0bab-4eb7-a963-b43dc9811e75",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://holidayapi.com/v1/countries?key=9c7edf3a-0bab-4eb7-a963-b43dc9811e75",
+					"protocol": "https",
+					"host": [
+						"holidayapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"countries"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "9c7edf3a-0bab-4eb7-a963-b43dc9811e75"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://holidayapi.com/v1/workday?key=9c7edf3a-0bab-4eb7-a963-b43dc9811e75&country=BY&start=2020-10-22&days=30",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://holidayapi.com/v1/workday?key=9c7edf3a-0bab-4eb7-a963-b43dc9811e75&country=BY&start=2020-10-22&days=30",
+					"protocol": "https",
+					"host": [
+						"holidayapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"workday"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "9c7edf3a-0bab-4eb7-a963-b43dc9811e75"
+						},
+						{
+							"key": "country",
+							"value": "BY"
+						},
+						{
+							"key": "start",
+							"value": "2020-10-22"
+						},
+						{
+							"key": "days",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://holidayapi.com/v1/holidays",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "key",
+							"value": "9c7edf3a-0bab-4eb7-a963-b43dc9811e75",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "BY",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2020",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://holidayapi.com/v1/holidays",
+					"protocol": "https",
+					"host": [
+						"holidayapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"holidays"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

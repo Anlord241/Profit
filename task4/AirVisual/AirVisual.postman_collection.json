@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "5186a6dc-7947-4d75-a363-117f8ee361bc",
+		"name": "AirVisual",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://api.airvisual.com/v2/states?country=russia&key=036849c9-e9b1-4aaf-9953-1a709cfcbd7d",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.airvisual.com/v2/states?country=russia&key=036849c9-e9b1-4aaf-9953-1a709cfcbd7d",
+					"protocol": "http",
+					"host": [
+						"api",
+						"airvisual",
+						"com"
+					],
+					"path": [
+						"v2",
+						"states"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "russia"
+						},
+						{
+							"key": "key",
+							"value": "036849c9-e9b1-4aaf-9953-1a709cfcbd7d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://api.airvisual.com/v2/countries?key=036849c9-e9b1-4aaf-9953-1a709cfcbd7d",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.airvisual.com/v2/countries?key=036849c9-e9b1-4aaf-9953-1a709cfcbd7d",
+					"protocol": "http",
+					"host": [
+						"api",
+						"airvisual",
+						"com"
+					],
+					"path": [
+						"v2",
+						"countries"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "036849c9-e9b1-4aaf-9953-1a709cfcbd7d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://api.airvisual.com/v2/cities?country=Russia&state=moscow&key=036849c9-e9b1-4aaf-9953-1a709cfcbd7d",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.airvisual.com/v2/cities?country=Russia&state=moscow&key=036849c9-e9b1-4aaf-9953-1a709cfcbd7d",
+					"protocol": "http",
+					"host": [
+						"api",
+						"airvisual",
+						"com"
+					],
+					"path": [
+						"v2",
+						"cities"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Russia"
+						},
+						{
+							"key": "state",
+							"value": "moscow"
+						},
+						{
+							"key": "key",
+							"value": "036849c9-e9b1-4aaf-9953-1a709cfcbd7d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://api.airvisual.com/v2/nearest_city?lat=45&lon=45&key=036849c9-e9b1-4aaf-9953-1a709cfcbd7d",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.airvisual.com/v2/nearest_city?lat=45&lon=45&key=036849c9-e9b1-4aaf-9953-1a709cfcbd7d",
+					"protocol": "http",
+					"host": [
+						"api",
+						"airvisual",
+						"com"
+					],
+					"path": [
+						"v2",
+						"nearest_city"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "45"
+						},
+						{
+							"key": "lon",
+							"value": "45"
+						},
+						{
+							"key": "key",
+							"value": "036849c9-e9b1-4aaf-9953-1a709cfcbd7d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://api.airvisual.com/v2/city?city=Los Angeles&state=California&country=USA&key=036849c9-e9b1-4aaf-9953-1a709cfcbd7d",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.airvisual.com/v2/city?city=Los Angeles&state=California&country=USA&key=036849c9-e9b1-4aaf-9953-1a709cfcbd7d",
+					"protocol": "http",
+					"host": [
+						"api",
+						"airvisual",
+						"com"
+					],
+					"path": [
+						"v2",
+						"city"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "Los Angeles"
+						},
+						{
+							"key": "state",
+							"value": "California"
+						},
+						{
+							"key": "country",
+							"value": "USA"
+						},
+						{
+							"key": "key",
+							"value": "036849c9-e9b1-4aaf-9953-1a709cfcbd7d"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
