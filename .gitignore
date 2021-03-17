@@ -1,5 +1,9 @@
-# содержимое файла .gitignore для IDEA
-*.iml
+# .gitignore for IDEA
 .DS_Store/
 .idea/
+target/
 out/
+*.iml
+*.jar
+*.war
+*.ear
