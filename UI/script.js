@@ -570,7 +570,6 @@
 
   console.log('Adding all ads from an array:');
   console.log(adCollection.addAll(ads));
-  console.log(11111);
   console.log(`Current size: ${adCollection.size()}`);
   //////////////////////////////////////
   console.log('Get ad with id === 1:');
