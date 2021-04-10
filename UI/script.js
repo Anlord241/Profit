@@ -286,7 +286,7 @@
     }
 
     clear() {
-      this._adList.splice(0, this._adList.length);
+      this._adList = [];
     }
 
     addAll(toAdd) {
