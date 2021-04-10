@@ -1,0 +1,26 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anlord241/Practice.git"
+  },
+  "author": "Andrew Konovalov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anlord241/Practice/issues"
+  },
+  "homepage": "https://github.com/Anlord241/Practice#readme",
+  "lint": "eslint --ignore-path .gitignore ."
+}
