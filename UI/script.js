@@ -1,6 +1,7 @@
 /* eslint-disable class-methods-use-this */
 // eslint-disable-next-line func-names
 (function () {
+  // eslint-disable-next-line no-unused-vars
   let ads = [
     {
       id: '1',
@@ -276,6 +277,7 @@
     },
   ];
 
+  // eslint-disable-next-line no-unused-vars
   class AdCollection {
     constructor(_adList) {
       this._adList = _adList.slice();
