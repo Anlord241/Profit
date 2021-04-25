@@ -3,7 +3,6 @@
     <meta charset="UTF-8" />
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script src="script.js"></script>
   </head>
 
   <body>
@@ -17,13 +16,13 @@
       </div>
       <div>
         <span class="title">Title</span>
-        <span class="hello-message">Здравствуйте, Гость/Username!</span>
+        <span class="hello-message" id = "name">Здравствуйте, Гость!</span>
 
-        <button class="authorization">Войти/Выйти</button>
+        <button class="authorization" id = "authorization">Войти</button>
       </div>
     </header>
 
-    <button class="add-advertisement">Добавить объявление</button>
+    <button class="add-advertisement" id = "add">Добавить объявление</button>
 
     <main>
       <div class="sort">
@@ -39,493 +38,62 @@
           <input type="date" name="calendar" />
           <button class="clear">сброс</button>
         </p>
-        <p>Теги: Tag1, Tag2</p>
+        <p>Теги: Не выбрано</p>
         <p>
-          <select class="select-tag">
+          <select class="select-tag" id = "select-tag">
             <option>Добавить тег</option>
-            <option>Tag1</option>
-            <option>Tag2</option>
           </select>
           <button class="clear">сброс</button>
         </p>
         <p>
           По имени поставщика:
-          <select class="select-creator">
+          <select class="select-creator" id = "select-creator">
             <option>Выберите поставщика</option>
-            <option>Name1</option>
-            <option>Name2</option>
           </select>
           <button class="clear">сброс</button>
         </p>
       </div>
 
-      <section class="advertisements">
-        <div class="advertisement">
+      <template id="advertisement-template" >
+        <div class = "advertisement">
           <div class="advertisement-picture">
-            <img
-              height="300px"
-              src="https://image.winudf.com/v2/image/Y29tLkNvbG9yU2NyZWVucy5CbGFja0FwcF9zY3JlZW5fMF8xNTM1ODY4NDU4XzA3Mg/screen-0.jpg?h=500&fakeurl=1&type=.jpg"
+            <img class="picture"
+              height="250px"
+              width="180px"
             />
           </div>
-
-          <div class="information">
-            <div class="advertisement-title">Title1</div>
-            <div class="tags">Tag1, Tag2</div>
-            <p>Поставщик: Username1</p>
-            <p>Описание: text1</p>
-            <br />
-            <p>Скидка: <span class="discount">- X%</span></p>
-            <br />
-            <p>Сайт поставщика: link1</p>
-            <p>Рейтинг: X</p>
-            <span class="until">Предложение действует до data!</span>
-          </div>
-
-          <div class="under-advertisement">
-            <button class="edit">Редактировать</button> /
-            <button class="delete">Удалить</button> /
-            <button class="leave-review">Оставить отзыв</button>
-            <h1>Отзывы</h1>
-          </div>
-
-          <div class="reviews">
-            <span class="no-reviews"> Нет отзывов </span>
-          </div>
-        </div>
-
-        <div class="advertisement">
-          <div class="advertisement-picture">
-            <img
-              height="300px"
-              src="https://image.winudf.com/v2/image/Y29tLkNvbG9yU2NyZWVucy5CbGFja0FwcF9zY3JlZW5fMF8xNTM1ODY4NDU4XzA3Mg/screen-0.jpg?h=500&fakeurl=1&type=.jpg"
-            />
-          </div>
-
-          <div class="information">
-            <div class="advertisement-title">Title2</div>
-            <div class="tags">Tag1, Tag2</div>
-            <p>Поставщик: Username2</p>
-            <p>Описание: text2</p>
-            <br />
-            <p>Скидка: <span class="discount">- X%</span></p>
-            <br />
-            <p>Сайт поставщика: link2</p>
-            <p>Рейтинг: X</p>
-            <span class="until">Предложение действует до data!</span>
-          </div>
-
-          <div class="under-advertisement">
-            <button class="edit">Редактировать</button> /
-            <button class="delete">Удалить</button> /
-            <button class="leave-review">Оставить отзыв</button>
-            <h1>Отзывы</h1>
-          </div>
-
-          <div class="reviews">
-            <div class="review">
-              Username1: text1
-              <button class="delete-review">Удалить отзыв</button>
+  
+            <div class="information">
+              <div class="advertisement-title"></div>
+              <div class="tags"></div>
+              <p class = "vendor"></p>
+              <p class = "description"></p>
+              <br />
+              <p>Скидка: <span class="discount"></span></p>
+              <br />
+              <p class = "link"></p>
+              <p class = "rating"></p>
+              <p class = "created-date"></p>
+              <span class="until"></span>
             </div>
-            <div class="review">
-              Username2: text2
-              <button class="delete-review">Удалить отзыв</button>
+  
+            <div class="under-advertisement">
+              <button class="edit">Редактировать</button>
+              <button class="delete" id = "delete">Удалить</button> 
+              <button class="leave-review" id = "leave-review">Оставить отзыв</button>
+              <h1>Отзывы</h1>
             </div>
-            <div class="review">
-              Username3: text3
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username4: text4
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username5: text5
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
+  
+            <div class="reviews">
           </div>
-        </div>
+  </template>
 
-        <div class="advertisement">
-          <div class="advertisement-picture">
-            <img
-              height="300px"
-              src="https://image.winudf.com/v2/image/Y29tLkNvbG9yU2NyZWVucy5CbGFja0FwcF9zY3JlZW5fMF8xNTM1ODY4NDU4XzA3Mg/screen-0.jpg?h=500&fakeurl=1&type=.jpg"
-            />
-          </div>
-
-          <div class="information">
-            <div class="advertisement-title">Title3</div>
-            <div class="tags">Tag1, Tag2</div>
-            <p>Поставщик: Username3</p>
-            <p>Описание: text3</p>
-            <br />
-            <p>Скидка: <span class="discount">- X%</span></p>
-
-            <br />
-            <p>Сайт поставщика: link3</p>
-            <p>Рейтинг: X</p>
-            <span class="until">Предложение действует до data!</span>
-          </div>
-          <div class="under-advertisement">
-            <button class="edit">Редактировать</button> /
-            <button class="delete">Удалить</button> /
-            <button class="leave-review">Оставить отзыв</button>
-            <h1>Отзывы</h1>
-          </div>
-
-          <div class="reviews">
-            <div class="review">
-              Username1: text1
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="advertisement">
-          <div class="advertisement-picture">
-            <img
-              height="300px"
-              src="https://image.winudf.com/v2/image/Y29tLkNvbG9yU2NyZWVucy5CbGFja0FwcF9zY3JlZW5fMF8xNTM1ODY4NDU4XzA3Mg/screen-0.jpg?h=500&fakeurl=1&type=.jpg"
-            />
-          </div>
-
-          <div class="information">
-            <div class="advertisement-title">Title4</div>
-            <div class="tags">Tag1, Tag2</div>
-            <p>Поставщик: Username4</p>
-            <p>Описание: text4</p>
-            <br />
-            <p>Скидка: <span class="discount">- X%</span></p>
-
-            <br />
-            <p>Сайт поставщика: link4</p>
-            <p>Рейтинг: X</p>
-            <span class="until">Предложение действует до data!</span>
-          </div>
-          <div class="under-advertisement">
-            <button class="edit">Редактировать</button> /
-            <button class="delete">Удалить</button> /
-            <button class="leave-review">Оставить отзыв</button>
-
-            <h1>Отзывы</h1>
-          </div>
-
-          <div class="reviews">
-            <div class="review">
-              Username1: text1
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username2: text2
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username3: text3
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="advertisement">
-          <div class="advertisement-picture">
-            <img
-              height="300px"
-              src="https://image.winudf.com/v2/image/Y29tLkNvbG9yU2NyZWVucy5CbGFja0FwcF9zY3JlZW5fMF8xNTM1ODY4NDU4XzA3Mg/screen-0.jpg?h=500&fakeurl=1&type=.jpg"
-            />
-          </div>
-
-          <div class="information">
-            <div class="advertisement-title">Title5</div>
-            <div class="tags">Tag1, Tag2</div>
-            <p>Поставщик: Username5</p>
-            <p>Описание: text5</p>
-            <br />
-            <p>Скидка: <span class="discount">- X%</span></p>
-
-            <br />
-            <p>Сайт поставщика: link5</p>
-            <p>Рейтинг: X</p>
-            <span class="until">Предложение действует до data!</span>
-          </div>
-          <div class="under-advertisement">
-            <button class="edit">Редактировать</button> /
-            <button class="delete">Удалить</button> /
-            <button class="leave-review">Оставить отзыв</button>
-
-            <h1>Отзывы</h1>
-          </div>
-          <div class="reviews">
-            <span class="no-reviews"> Нет отзывов </span>
-          </div>
-        </div>
-
-        <div class="advertisement">
-          <div class="advertisement-picture">
-            <img
-              height="300px"
-              src="https://image.winudf.com/v2/image/Y29tLkNvbG9yU2NyZWVucy5CbGFja0FwcF9zY3JlZW5fMF8xNTM1ODY4NDU4XzA3Mg/screen-0.jpg?h=500&fakeurl=1&type=.jpg"
-            />
-          </div>
-
-          <div class="information">
-            <div class="advertisement-title">Title6</div>
-            <div class="tags">Tag1, Tag2</div>
-            <p>Поставщик: Username6</p>
-            <p>Описание: text6</p>
-            <br />
-            <p>Скидка: <span class="discount">- X%</span></p>
-
-            <br />
-            <p>Сайт поставщика: link6</p>
-            <p>Рейтинг: X</p>
-            <span class="until">Предложение действует до data!</span>
-          </div>
-          <div class="under-advertisement">
-            <button class="edit">Редактировать</button> /
-            <button class="delete">Удалить</button> /
-            <button class="leave-review">Оставить отзыв</button>
-
-            <h1>Отзывы</h1>
-          </div>
-
-          <div class="reviews">
-            <div class="review">
-              Username1: text1
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username2: text2
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username3: text3
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username4: text4
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username5: text5
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="advertisement">
-          <div class="advertisement-picture">
-            <img
-              height="300px"
-              src="https://image.winudf.com/v2/image/Y29tLkNvbG9yU2NyZWVucy5CbGFja0FwcF9zY3JlZW5fMF8xNTM1ODY4NDU4XzA3Mg/screen-0.jpg?h=500&fakeurl=1&type=.jpg"
-            />
-          </div>
-
-          <div class="information">
-            <div class="advertisement-title">Title7</div>
-            <div class="tags">Tag1, Tag2</div>
-            <p>Поставщик: Username7</p>
-            <p>Описание: text7</p>
-            <br />
-            <p>Скидка: <span class="discount">- X%</span></p>
-
-            <br />
-            <p>Сайт поставщика: link7</p>
-            <p>Рейтинг: X</p>
-            <span class="until">Предложение действует до data!</span>
-          </div>
-          <div class="under-advertisement">
-            <button class="edit">Редактировать</button> /
-            <button class="delete">Удалить</button> /
-            <button class="leave-review">Оставить отзыв</button>
-
-            <h1>Отзывы</h1>
-          </div>
-
-          <div class="reviews">
-            <div class="review">
-              Username1: text1
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username2: text2
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username3: text3
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username4: text4
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username5: text5
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="advertisement">
-          <div class="advertisement-picture">
-            <img
-              height="300px"
-              src="https://image.winudf.com/v2/image/Y29tLkNvbG9yU2NyZWVucy5CbGFja0FwcF9zY3JlZW5fMF8xNTM1ODY4NDU4XzA3Mg/screen-0.jpg?h=500&fakeurl=1&type=.jpg"
-            />
-          </div>
-
-          <div class="information">
-            <div class="advertisement-title">Title8</div>
-            <div class="tags">Tag1, Tag2</div>
-            <p>Поставщик: Username8</p>
-            <p>Описание: text8</p>
-            <br />
-            <p>Скидка: <span class="discount">- X%</span></p>
-
-            <br />
-            <p>Сайт поставщика: link8</p>
-            <p>Рейтинг: X</p>
-            <span class="until">Предложение действует до data!</span>
-          </div>
-          <div class="under-advertisement">
-            <button class="edit">Редактировать</button> /
-            <button class="delete">Удалить</button> /
-            <button class="leave-review">Оставить отзыв</button>
-
-            <h1>Отзывы</h1>
-          </div>
-
-          <div class="reviews">
-            <div class="review">
-              Username1: text1
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username2: text2
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username3: text3
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username4: text4
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username5: text5
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="advertisement">
-          <div class="advertisement-picture">
-            <img
-              height="300px"
-              src="https://image.winudf.com/v2/image/Y29tLkNvbG9yU2NyZWVucy5CbGFja0FwcF9zY3JlZW5fMF8xNTM1ODY4NDU4XzA3Mg/screen-0.jpg?h=500&fakeurl=1&type=.jpg"
-            />
-          </div>
-
-          <div class="information">
-            <div class="advertisement-title">Title9</div>
-            <div class="tags">Tag1, Tag2</div>
-            <p>Поставщик: Username9</p>
-            <p>Описание: text9</p>
-            <br />
-            <p>Скидка: <span class="discount">- X%</span></p>
-
-            <br />
-            <p>Сайт поставщика: link9</p>
-            <p>Рейтинг: X</p>
-            <span class="until">Предложение действует до data!</span>
-          </div>
-          <div class="under-advertisement">
-            <button class="edit">Редактировать</button> /
-            <button class="delete">Удалить</button> /
-            <button class="leave-review">Оставить отзыв</button>
-
-            <h1>Отзывы</h1>
-          </div>
-
-          <div class="reviews">
-            <div class="review">
-              Username1: text1
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username2: text2
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username3: text3
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username4: text4
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username5: text5
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="advertisement">
-          <div class="advertisement-picture">
-            <img
-              height="300px"
-              src="https://image.winudf.com/v2/image/Y29tLkNvbG9yU2NyZWVucy5CbGFja0FwcF9zY3JlZW5fMF8xNTM1ODY4NDU4XzA3Mg/screen-0.jpg?h=500&fakeurl=1&type=.jpg"
-            />
-          </div>
-
-          <div class="information">
-            <div class="advertisement-title">Title10</div>
-            <div class="tags">Tag1, Tag2</div>
-            <p>Поставщик: Username10</p>
-            <p>Описание: text10</p>
-            <br />
-            <p>Скидка: <span class="discount">- X%</span></p>
-
-            <br />
-            <p>Сайт поставщика: link10</p>
-            <p>Рейтинг: X</p>
-            <span class="until">Предложение действует до data!</span>
-          </div>
-          <div class="under-advertisement">
-            <button class="edit">Редактировать</button> /
-            <button class="delete">Удалить</button> /
-            <button class="leave-review">Оставить отзыв</button>
-
-            <h1>Отзывы</h1>
-          </div>
-
-          <div class="reviews">
-            <div class="review">
-              Username1: text1
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username2: text2
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username3: text3
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username4: text4
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-            <div class="review">
-              Username5: text5
-              <button class="delete-review">Удалить отзыв</button>
-            </div>
-          </div>
-        </div>
+      <section class="advertisements" id = "advertisements">
       </section>
 
-      <button class="load-more">Загрузить еще</button>
+      <button class="load-more" id = "load-more">Загрузить еще</button>
+
+      
     </main>
 
     <footer>
@@ -534,7 +102,9 @@
         don.andrew241@gmail.com
       </span>
       <span class="title-footer">Title</span>
-      <span class="last-update">Last change:<br />28.02.2021</span>
+      <span class="last-update">Last change:<br />19.04.2021</span>
     </footer>
+
   </body>
+  <script src="script.js"></script>
 </html>
