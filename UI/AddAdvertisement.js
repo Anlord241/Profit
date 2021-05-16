@@ -98,9 +98,10 @@
       ad.createdAt = new Date(createdAt);
       ad.photoLink = oldPhotoLink;
     }
+
     if (form.file.value) {
       ad.photoLink = form.file.value.substr(12);
-    } else {
+    } else if (!oldPhotoLink) {
       ad.photoLink = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
     }
     ad.title = form.title.value;
@@ -138,6 +139,7 @@
       'src',
       'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png',
     );
+    oldPhotoLink = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
     buttonDeletePicture.hidden = true;
     form.file.value = null;
   }
