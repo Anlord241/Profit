@@ -372,7 +372,6 @@
           let toAdd = JSON.parse(localStorage.getItem('toAdd'));
           toAdd.createdAt = new Date(toAdd.createdAt);
           toAdd.validUntil = new Date(toAdd.validUntil);
-          console.log(toAdd.id);
           this.edit(toAdd.id, toAdd);
         }
       }
@@ -546,7 +545,7 @@
         return false;
       }
       if (typeof item.vendor !== 'string') {
-        console.log('Link has illegal type');
+        console.log('Vendor has illegal type');
         return false;
       }
       if (item.vendor.length === 0) {
@@ -586,7 +585,7 @@
       }
 
       if (Object.prototype.hasOwnProperty.call(item, 'photoLink')) {
-        if (typeof item.photoLink !== 'string') {
+        if (typeof item.photoLink !== 'string' && item.photoLink !== null) {
           console.log('PhotoLink has illegal type');
           return false;
         }

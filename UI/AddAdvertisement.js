@@ -46,7 +46,7 @@
         || 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png',
     );
     let buttonDeletePicture = document.getElementById('delete-picture');
-    if (ad.photoLink) {
+    if (ad.photoLink != null) {
       buttonDeletePicture.hidden = false;
     }
 
@@ -115,7 +115,7 @@
     if (form.file.value) {
       ad.photoLink = form.file.value.substr(12);
     } else if (!oldPhotoLink) {
-      ad.photoLink = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
+      ad.photoLink = null;
     }
     ad.title = form.title.value;
     ad.description = form.description.value;
@@ -152,7 +152,7 @@
       'src',
       'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png',
     );
-    oldPhotoLink = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
+    oldPhotoLink = null;
     buttonDeletePicture.hidden = true;
     form.file.value = null;
   }
