@@ -864,7 +864,7 @@
 
     _addReviews(NEW_ITEM, ad) {
       const REVIEWS = NEW_ITEM.querySelector('.reviews');
-      if (Object.prototype.hasOwnProperty.call(ad, 'reviews')) {
+      if (Object.prototype.hasOwnProperty.call(ad, 'reviews') && ad.reviews.length > 0) {
         for (let i = 0; i < ad.reviews.length; i += 1) {
           if (i < 5) {
             const review = this._buildReview(ad.reviews[i]);
