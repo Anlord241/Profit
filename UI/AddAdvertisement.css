@@ -89,6 +89,9 @@ textarea {
   background-color: #c0e5e0;
 }
 
+.error-message{
+  color:red;
+}
 .save {
   margin-top: 5%;
   margin-left: 40%;

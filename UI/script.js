@@ -893,6 +893,9 @@
     }
 
     _buildAd(item) {
+      let dateOptions = {
+        year: 'numeric', month: 'long', day: 'numeric',
+      };
       const TEMPLATE = document.getElementById('advertisement-template');
       const FRAGMENT = document.importNode(TEMPLATE.content, true);
 
@@ -909,7 +912,7 @@
       );
       NEW_ITEM.querySelector(
         '.created-date',
-      ).textContent = `Дата публикации: ${item.createdAt}`;
+      ).textContent = `Дата публикации: ${item.createdAt.toLocaleDateString('Ru', dateOptions)}`;
       NEW_ITEM.querySelector(
         '.vendor',
       ).textContent = `Поставщик: ${item.vendor}`;
@@ -922,7 +925,7 @@
       ).textContent = `Ссылка на сайт поставщика: ${item.link}`;
       NEW_ITEM.querySelector(
         '.until',
-      ).textContent = `Предложение действует до: ${item.validUntil}`;
+      ).textContent = `Предложение действует до ${item.validUntil.toLocaleDateString('Ru', dateOptions)}`;
       item.rating = this._countRating(item);
       if (item.rating !== 0) {
         NEW_ITEM.querySelector(

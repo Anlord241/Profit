@@ -66,10 +66,8 @@
   let buttonDeletePicture = document.getElementById('delete-picture');
 
   function addAdvertisement(event) {
-    if (event.target === buttonDeletePicture) {
-      return;
-    }
     event.preventDefault();
+    let errorMessage = document.getElementById('error-message');
     let form = document.getElementById('add');
     let ad = {
       title: null,
@@ -83,11 +81,22 @@
       reviews: [],
       validUntil: null,
     };
-    if (tags.length === 0) {
-      let errorMessage = document.getElementById('error-tags');
-      errorMessage.hidden = false;
+
+    if (form.description.value.length > 100) {
+      errorMessage.textContent = 'Длина описания превышает 100 символов!';
       return;
     }
+    if (tags.length === 0) {
+      let errorTags = document.getElementById('error-tags');
+      errorTags.hidden = false;
+      return;
+    }
+
+    if (form.discount.value <= 0 || form.discount.value >= 100) {
+      errorMessage.textContent = 'Неверное значение скидки (от 1 до 99)!';
+      return;
+    }
+
     if (mode === 'add') {
       let id = localStorage.getItem('id');
       ad.id = String(Number(id) + 1);
@@ -97,6 +106,10 @@
       ad.id = editId;
       ad.createdAt = new Date(createdAt);
       ad.photoLink = oldPhotoLink;
+    }
+    if (new Date(form.date.value) < new Date(ad.createdAt.toDateString())) {
+      errorMessage.textContent = 'Срок действия уже истек!';
+      return;
     }
 
     if (form.file.value) {
@@ -152,6 +165,8 @@
       tag.value = null;
       tags.sort();
       showTags.textContent = tags.join(', ');
+      let errorTags = document.getElementById('error-tags');
+      errorTags.hidden = true;
     }
   }
 
