@@ -50,14 +50,19 @@
       errorRating.hidden = false;
       return;
     }
+
     review.rating = rating;
+
+    let id = localStorage.getItem('lastReviewId');
+    review.id = String(Number(id) + 1);
+    localStorage.setItem('lastReviewId', Number(id) + 1);
+
     if (Object.prototype.hasOwnProperty.call(ad, 'reviews')) {
       ad.reviews.unshift(review);
     } else {
       ad.reviews = [review];
     }
 
-    console.log(ad.reviews);
     localStorage.setItem('toAdd', JSON.stringify(ad));
     localStorage.setItem('mode', 'edit');
     document.location.href = 'index.html';

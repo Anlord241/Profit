@@ -21,8 +21,12 @@
       rating: 1,
       validUntil: new Date('2021-03-21T12:00:00'),
       reviews: [
-        { text: 'Cool!', username: 'Вася', rating: 2 },
-        { text: 'Я Никита!', username: 'Никита', rating: 3 },
+        {
+          text: 'Cool!', username: 'Вася', rating: 2, id: '1',
+        },
+        {
+          text: 'Я Никита!', username: 'Никита', rating: 3, id: '2',
+        },
       ],
     },
 
@@ -38,8 +42,12 @@
       validUntil: new Date('2021-04-21T12:00:00'),
       rating: 1.1,
       reviews: [
-        { text: 'Cool!', username: 'Вася', rating: 4 },
-        { text: 'Я Никита!', username: 'Никита', rating: 5 },
+        {
+          text: 'Cool!', username: 'Вася', rating: 4, id: '3',
+        },
+        {
+          text: 'Я Никита!', username: 'Никита', rating: 5, id: '4',
+        },
       ],
     },
 
@@ -56,8 +64,12 @@
       validUntil: new Date('2021-04-22T12:00:00'),
       rating: 3.0,
       reviews: [
-        { text: 'Cool!', username: 'Вася', rating: 3 },
-        { text: 'Я Никита!', username: 'Никита', rating: 2 },
+        {
+          text: 'Cool!', username: 'Вася', rating: 3, id: '5',
+        },
+        {
+          text: 'Я Никита!', username: 'Никита', rating: 2, id: '6',
+        },
       ],
     },
     {
@@ -86,8 +98,12 @@
       validUntil: new Date('2022-03-25T12:00:00'),
       rating: 0.0,
       reviews: [
-        { text: 'Cool!', username: 'Вася', rating: 2 },
-        { text: 'Я Никита!', username: 'Никита', rating: 1 },
+        {
+          text: 'Cool!', username: 'Вася', rating: 2, id: '7',
+        },
+        {
+          text: 'Я Никита!', username: 'Никита', rating: 1, id: '8',
+        },
       ],
     },
 
@@ -103,8 +119,12 @@
       validUntil: new Date('2021-03-26T12:00:00'),
       rating: 1.5,
       reviews: [
-        { text: 'Cool!', username: 'Вася', rating: 4 },
-        { text: 'Я Никита!', username: 'Никита', rating: 2 },
+        {
+          text: 'Cool!', username: 'Вася', rating: 4, id: '9',
+        },
+        {
+          text: 'Я Никита!', username: 'Никита', rating: 2, id: '10',
+        },
       ],
     },
 
@@ -120,8 +140,12 @@
       validUntil: new Date('2021-04-27T12:00:00'),
       rating: 0.0,
       reviews: [
-        { text: 'Cool!', username: 'Вася', rating: 3 },
-        { text: 'Я Никита!', username: 'Никита', rating: 2 },
+        {
+          text: 'Cool!', username: 'Вася', rating: 3, id: '11',
+        },
+        {
+          text: 'Я Никита!', username: 'Никита', rating: 2, id: '12',
+        },
       ],
     },
 
@@ -136,7 +160,9 @@
       discount: '5%',
       validUntil: new Date('2021-02-28T12:00:00'),
       rating: 1.7,
-      reviews: [{ text: 'Cool!', username: 'Вася', rating: 3 }],
+      reviews: [{
+        text: 'Cool!', username: 'Вася', rating: 3, id: '13',
+      }],
     },
 
     {
@@ -153,8 +179,12 @@
       validUntil: new Date('2021-04-30T12:00:00'),
       rating: 0.0,
       reviews: [
-        { text: 'Cool!', username: 'Вася', rating: 3 },
-        { text: 'Я Никита!', username: 'Никита', rating: 1 },
+        {
+          text: 'Cool!', username: 'Вася', rating: 3, id: '14',
+        },
+        {
+          text: 'Я Никита!', username: 'Никита', rating: 1, id: '15',
+        },
       ],
     },
 
@@ -184,7 +214,9 @@
       discount: '10%',
       validUntil: new Date('2021-03-25T12:00:00'),
       rating: 0.0,
-      reviews: [{ text: 'Cool!', username: 'Вася', rating: 4 }],
+      reviews: [{
+        text: 'Cool!', username: 'Вася', rating: 4, id: '16',
+      }],
     },
 
     {
@@ -198,7 +230,9 @@
       discount: '10%',
       validUntil: new Date('2021-04-21T12:00:00'),
       rating: 2.1,
-      reviews: [{ text: 'Cool!', username: 'Вася', rating: 2 }],
+      reviews: [{
+        text: 'Cool!', username: 'Вася', rating: 2, id: '17',
+      }],
     },
 
     {
@@ -215,8 +249,12 @@
       validUntil: new Date('2021-04-21T12:00:00'),
       rating: 0.0,
       reviews: [
-        { text: 'Cool!', username: 'Вася', rating: 1 },
-        { text: 'Я Никита!', username: 'Никита', rating: 3 },
+        {
+          text: 'Cool!', username: 'Вася', rating: 1, id: '18',
+        },
+        {
+          text: 'Я Никита!', username: 'Никита', rating: 3, id: '19',
+        },
       ],
     },
     {
@@ -230,7 +268,9 @@
       discount: '10%',
       validUntil: new Date('2021-04-21T12:00:00'),
       rating: 2.3,
-      reviews: [{ text: 'Cool!', username: 'Вася', rating: 2 }],
+      reviews: [{
+        text: 'Cool!', username: 'Вася', rating: 2, id: '20',
+      }],
     },
 
     {
@@ -247,8 +287,12 @@
       validUntil: new Date('2021-12-31T12:00:00'),
       rating: 0.0,
       reviews: [
-        { text: 'Отличные гробы!', username: 'Вася', rating: 3 },
-        { text: 'Я Никита!', username: 'Никита', rating: 2 },
+        {
+          text: 'Отличные гробы!', username: 'Вася', rating: 3, id: '21',
+        },
+        {
+          text: 'Я Никита!', username: 'Никита', rating: 2, id: '22',
+        },
       ],
     },
 
@@ -264,8 +308,12 @@
       validUntil: new Date('2021-03-21T12:00:00'),
       rating: 2.5,
       reviews: [
-        { text: 'Cool!', username: 'Вася', rating: 4 },
-        { text: 'Я Никита!', username: 'Никита', rating: 5 },
+        {
+          text: 'Cool!', username: 'Вася', rating: 4, id: '23',
+        },
+        {
+          text: 'Я Никита!', username: 'Никита', rating: 5, id: '24',
+        },
       ],
     },
 
@@ -283,8 +331,12 @@
       validUntil: new Date('2021-04-21T12:00:00'),
       rating: 0.0,
       reviews: [
-        { text: 'Cool!', username: 'Вася', rating: 2 },
-        { text: 'Я Никита!', username: 'Никита', rating: 4 },
+        {
+          text: 'Cool!', username: 'Вася', rating: 2, id: '25',
+        },
+        {
+          text: 'Я Никита!', username: 'Никита', rating: 4, id: '26',
+        },
       ],
     },
 
@@ -301,7 +353,9 @@
       discount: '10%',
       validUntil: new Date('2021-04-21T12:00:00'),
       rating: 2.7,
-      reviews: [{ text: 'Cool!', username: 'Вася', rating: 2 }],
+      reviews: [{
+        text: 'Cool!', username: 'Вася', rating: 2, id: '27',
+      }],
     },
 
     {
@@ -317,7 +371,9 @@
       discount: '10%',
       rating: 0.0,
       validUntil: new Date('2021-12-31T12:00:00'),
-      reviews: [{ text: 'Cool!', username: 'Вася', rating: 4 }],
+      reviews: [{
+        text: 'Cool!', username: 'Вася', rating: 4, id: '28',
+      }],
     },
 
     {
@@ -334,8 +390,12 @@
       validUntil: new Date('2021-12-31T12:00:00'),
       rating: 2.9,
       reviews: [
-        { text: 'Cool!', username: 'Вася', rating: 2 },
-        { text: 'Я Никита!', username: 'Никита', rating: 5 },
+        {
+          text: 'Cool!', username: 'Вася', rating: 2, id: '29',
+        },
+        {
+          text: 'Я Никита!', username: 'Никита', rating: 5, id: '30',
+        },
       ],
     },
   ];
@@ -345,7 +405,8 @@
       this._ads = _ads.slice();
       if (!localStorage.getItem('ads')) {
         this.save();
-        localStorage.setItem('id', '20');
+        localStorage.setItem('lastAdId', '20');
+        localStorage.setItem('lastReviewId', '30');
       } else {
         this.restore();
       }
@@ -702,6 +763,23 @@
       this.save();
       return true;
     }
+
+    removeReview(id) {
+      let review;
+      this._ads.forEach((item) => {
+        if (Object.prototype.hasOwnProperty.call(item, 'reviews')) {
+          review = item.reviews.find((a) => a.id === id);
+
+          if (review) {
+            item.reviews.splice(
+              item.reviews.findIndex((a) => a === review),
+              1,
+            );
+          }
+        }
+      });
+      this.save();
+    }
   }
 
   class View {
@@ -851,6 +929,7 @@
       REVIEW.classList.add('review');
       REVIEW.innerHTML = `<div class = "username">${reviewInfo.username}:</div>
     <div class = "review-text">${reviewInfo.text}</div>`;
+      REVIEW.id = reviewInfo.id;
       if (reviewInfo.username === this.currentUser) {
         const DELETE_REVIEW_BUTTON = document.createElement('div');
         DELETE_REVIEW_BUTTON.innerHTML = ` </div>
@@ -1138,6 +1217,11 @@
     clearTags() {
       this.view.clearTags();
     }
+
+    removeReview(id) {
+      this.view.model.removeReview(id);
+      this.view.init();
+    }
   }
   let buttonData = document.getElementById('data-sort');
   let buttonRating = document.getElementById('rating-sort');
@@ -1242,6 +1326,7 @@
     if (event.target.getAttribute('id') === 'delete-review') {
       let review = event.target.parentElement.parentElement;
       review.parentElement.removeChild(review);
+      controller.removeReview(review.id);
     }
   }
   adsNodes.addEventListener('click', handleDeleteBtnClick);

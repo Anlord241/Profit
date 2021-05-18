@@ -98,9 +98,9 @@
     }
 
     if (mode === 'add') {
-      let id = localStorage.getItem('id');
+      let id = localStorage.getItem('lastAdId');
       ad.id = String(Number(id) + 1);
-      localStorage.setItem('id', Number(id) + 1);
+      localStorage.setItem('lastAdId', Number(id) + 1);
       ad.createdAt = currentDate;
     } else {
       ad.id = editId;
