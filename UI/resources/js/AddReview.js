@@ -1,3 +1,4 @@
+/* eslint-disable no-self-assign */
 // eslint-disable-next-line func-names
 (function () {
   const MESSAGE = document.getElementById('name');
@@ -19,7 +20,7 @@
   let DATE = document.getElementById('current-date');
   DATE.innerText = currentDate;
 
-  let form = document.getElementById('add');
+  let form = document.getElementById('add-form');
 
   function addReview(event) {
     event.preventDefault();
@@ -65,12 +66,12 @@
 
     localStorage.setItem('toAdd', JSON.stringify(ad));
     localStorage.setItem('mode', 'edit');
-    document.location.href = 'index.html';
+    document.location.href = document.location.href;
   }
   form.addEventListener('submit', addReview);
   function logout() {
     localStorage.removeItem('user');
-    document.location.href = 'index.html';
+    document.location.href = document.location.href;
   }
   const buttonLogout = document.getElementById('authorization');
   buttonLogout.addEventListener('click', logout);

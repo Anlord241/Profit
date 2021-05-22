@@ -26,7 +26,7 @@
 
     oldPhotoLink = ad.photoLink;
     createdAt = ad.createdAt;
-    let form = document.getElementById('add');
+    let form = document.getElementById('add-form');
     form.title.value = ad.title;
     form.description.value = ad.description;
     form.link.value = ad.link;
@@ -58,8 +58,10 @@
 
   function logout() {
     localStorage.removeItem('user');
-    document.location.href = 'index.html';
+    // eslint-disable-next-line no-self-assign
+    document.location.href = document.location.href;
   }
+
   const buttonLogout = document.getElementById('authorization');
   buttonLogout.addEventListener('click', logout);
 
@@ -68,7 +70,7 @@
   function addAdvertisement(event) {
     event.preventDefault();
     let errorMessage = document.getElementById('error-message');
-    let form = document.getElementById('add');
+    let form = document.getElementById('add-form');
     let ad = {
       title: null,
       description: null,
@@ -126,11 +128,12 @@
 
     localStorage.setItem('toAdd', JSON.stringify(ad));
     localStorage.setItem('mode', mode);
-    document.location.href = 'index.html';
+    // eslint-disable-next-line no-self-assign
+    document.location.href = document.location.href;
   }
 
   const file = document.getElementById('file');
-  const form = document.getElementById('add');
+  const form = document.getElementById('add-form');
   function showPicture() {
     let photoLink = file.value.substr(12);
     const photo = document.getElementById('picture');

@@ -795,6 +795,199 @@
       this.filterTags = [];
     }
 
+    switchToLogInPage() {
+      const main = document.getElementById('main');
+      main.innerHTML = `
+      <div class="hello"><span>С возвращением!</span></div>
+      <div class="authorization">
+        <span class="error-authorization" id="error-authorization" hidden
+          >Неверное имя пользователя или пароль</span
+        >
+        <form name="authorization" id="authorization-form">
+          <p>Имя пользователя:</p>
+          <input type="text" id="username" name="username" />
+          <p>Пароль:</p>
+          <input type="password" disabled />
+          <input type="submit" class="login" id="login" value="Войти" />
+        </form>
+      </div>`;
+
+      const userStatus = document.getElementById('user-status');
+      userStatus.hidden = true;
+
+      const styles = document.getElementById('styles');
+      styles.setAttribute('href', 'resources/css/login.css');
+
+      const script = document.createElement('script');
+      script.setAttribute('src', 'resources/js/Login.js');
+      main.append(script);
+    }
+
+    switchToAddAdPage() {
+      const addButton = document.getElementById('add');
+      addButton.hidden = true;
+      const main = document.getElementById('main');
+      main.innerHTML = `
+      <div class="add-advertisement">
+        <form name="add" id="add-form">
+          <div>
+            <div class="information">
+              <p>
+                <span>Имя поставщика:</span>
+                <span class="creator-name" id="creator-name"></span>
+              </p>
+              <p>
+                <span>Название услуги:</span>
+                <input name="title" required /> <span class="star"> *</span>
+              </p>
+              <p>
+                <span>Описание:</span>
+                <textarea name="description" required></textarea
+                ><span class="star"> *</span>
+              </p>
+              <p>
+                <span>Ссылка на сайт поставщика:</span>
+                <input name="link" required /><span class="star"> *</span>
+              </p>
+              <span>Теги: </span>
+              <span id="tags" class="tags">Не выбраны</span
+              ><span class="star"> *</span>
+              <span class="error-tags" id="error-tags" hidden>
+                Выберите минимум 1 тег!</span
+              >
+
+              <p>
+                Введите тег: <input type="text" id="tag" />
+                <input
+                  type="button"
+                  id="add-tag"
+                  class="add-tag"
+                  value="Добавить тег"
+                />
+                <input
+                  type="button"
+                  id="clear-tags"
+                  class="clear-tags"
+                  value="Сброс"
+                />
+              </p>
+
+              <p>
+                <span>Размер скидки:</span>
+                <input
+                  name="discount"
+                  onkeypress="if(isNaN(String.fromCharCode(event.keyCode))) return false;"
+                  required
+                />
+                %
+                <span class="star"> *</span>
+              </p>
+
+              <p>
+                <span>Срок действия предложения: по </span>
+                <input name="date" type="date" class="calendar" required />
+                <span class="star"> *</span>
+              </p>
+
+              <p>
+                <span>Дата и время добавления:</span>
+                <span class="current-date" id="current-date"></span>
+              </p>
+              <p><span class="error-message" id="error-message"></span></p>
+              <p><span class="star">*</span> - обязательное поле</p>
+            </div>
+
+            <img
+              class="picture"
+              id="picture"
+              src="https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png"
+              height="250px"
+              width="180px"
+            />
+            <input type="file" name="file" id="file" class="file" />
+            <p>
+              <input
+                type="button"
+                class="delete-picture"
+                id="delete-picture"
+                value="Удалить фото"
+                hidden
+              />
+            </p>
+          </div>
+
+          <input type="submit" class="save" id="save" value="Сохранить" />
+        </form>
+      </div>
+     `;
+
+      const styles = document.getElementById('styles');
+      styles.setAttribute('href', 'resources/css/AddAdvertisement.css');
+
+      const script = document.createElement('script');
+      script.setAttribute('src', 'resources/js/AddAdvertisement.js');
+      main.append(script);
+    }
+
+    switchToAddReviewPage() {
+      const addButton = document.getElementById('add');
+      addButton.hidden = true;
+      const main = document.getElementById('main');
+      main.innerHTML = `
+      <main>
+      <div class="add-review">
+        <form name="add" id="add-form">
+        <p>
+            Объявление: <span class = "ad-title" id = "ad-title"></span>
+        </p>
+        <p>
+            Имя пользователя: <span class = "username" id = "username"></span>
+        </p>
+
+        <p>
+           <span style = "float:left"> Текст отзыва:</span> 
+            <textarea name="text" class = "text" required></textarea>  <span class="star"> *</span>
+        </p>
+
+        
+        <p>
+            <span style = "float:left">Оценка:</span>
+            
+            <div class="rating">
+                
+                <input type="radio" id="star-5" name="five" value="5"/>
+                <label for="star-5" title="5"></label>
+                <input type="radio" id="star-4" name="four" value="4"/>
+                <label for="star-4" title="4"></label>    
+                <input type="radio" id="star-3" name="three" value="3"/>
+                <label for="star-3" title="3"></label>  
+                <input type="radio" id="star-2" name="two" value="2"/>
+                <label for="star-2" title="2"></label>    
+                <input type="radio" id="star-1" name="one" value="1"/>
+                <label for="star-1" title="1"></label>
+                <span class="star"> *</span>
+            </div>
+            <span class = error-rating id = error-rating hidden>Оцените объявление!</span>
+         </p>
+
+         <p>
+            <span>Дата и время добавления:</span>
+            <span class="current-date" id="current-date"></span>
+          </p>
+          <p><span class="star">*</span> - обязательное поле</p>
+          <input type="submit" class="save" id="save" value="Сохранить" />
+        </form>
+      </div>
+      `;
+
+      const styles = document.getElementById('styles');
+      styles.setAttribute('href', 'resources/css/addReview.css');
+
+      const script = document.createElement('script');
+      script.setAttribute('src', 'resources/js/addReview.js');
+      main.append(script);
+    }
+
     setSortType(sortType) {
       this._sortType = sortType;
       this.init();
@@ -1017,6 +1210,7 @@
     }
 
     init() {
+      this.model.restore();
       this.clear();
       const NODE = document.getElementById('no-advertisements');
       if (this.currentUser) {
@@ -1250,10 +1444,12 @@
   function logInOrLogOut() {
     if (controller.getUserName()) {
       controller.logout();
-    } else document.location.href = 'Login.html';
+    } else {
+      controller.view.switchToLogInPage();
+    }
   }
   function add() {
-    document.location.href = 'AddAdvertisement.html';
+    controller.view.switchToAddAdPage();
   }
 
   function loadMore() {
@@ -1316,12 +1512,12 @@
     if (event.target.getAttribute('id') === 'edit') {
       let id = event.target.parentElement.parentElement.getAttribute('id');
       localStorage.setItem('toEdit', JSON.stringify(controller.get(id)));
-      document.location.href = 'AddAdvertisement.html';
+      controller.view.switchToAddAdPage();
     }
     if (event.target.getAttribute('id') === 'leave-review') {
       let id = event.target.parentElement.parentElement.getAttribute('id');
       localStorage.setItem('toAddReview', JSON.stringify(controller.get(id)));
-      document.location.href = 'AddReview.html';
+      controller.view.switchToAddReviewPage();
     }
     if (event.target.getAttribute('id') === 'delete-review') {
       let review = event.target.parentElement.parentElement;
