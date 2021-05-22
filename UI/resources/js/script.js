@@ -1210,7 +1210,6 @@
     }
 
     init() {
-      this.model.restore();
       this.clear();
       const NODE = document.getElementById('no-advertisements');
       if (this.currentUser) {
