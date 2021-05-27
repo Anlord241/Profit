@@ -1,99 +1,99 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Profit!</title>
+    <link rel="stylesheet" type="text/css" href="resources/css/styles.css" id = "styles" />
   </head>
 
   <body>
     <header>
       <div class="logo">
         <img
+        t
           width="50px"
           height="50px"
-          src="https://image.winudf.com/v2/image/Y29tLkNvbG9yU2NyZWVucy5CbGFja0FwcF9zY3JlZW5fMF8xNTM1ODY4NDU4XzA3Mg/screen-0.jpg?h=500&fakeurl=1&type=.jpg"
+          src="resources/images/profit.png"
         />
       </div>
-      <div>
-        <span class="title">Title</span>
-        <span class="hello-message" id = "name">Здравствуйте, Гость!</span>
-
-        <button class="authorization" id = "authorization">Войти</button>
+  <span class="title">Profit!</span>
+      <div id = "user-status">
+      
+        <span class="hello-message" id="name">Здравствуйте, Гость!</span>
+        <button class="authorization" id="authorization">Войти</button>
       </div>
+
     </header>
 
-    <button class="add-advertisement" id = "add">Добавить объявление</button>
+    <button class="add-advertisement" id="add">Добавить объявление</button>
 
-    <main>
+    <main id = "main">
       <div class="sort">
         <span class="choose-sort">Сортировка: </span>
-        <button class="data-sort">по дате</button>
-        <button class="rating-sort">по рейтингу</button>
+        <button class="data-sort" id="data-sort">по дате</button>
+        <button class="rating-sort" id="rating-sort">по рейтингу</button>
       </div>
 
       <div class="filter">
         <p>Фильтры:</p>
         <p>
-          По дате: с <input type="date" name="calendar" /> по
-          <input type="date" name="calendar" />
-          <button class="clear">сброс</button>
+          По дате: с <input type="date" name="calendar" id="from" /> по
+          <input type="date" name="calendar" id="to" />
+          <button class="clear" id="clear-date">сброс</button>
         </p>
-        <p>Теги: Не выбрано</p>
+        <p><span id="selected-tags">Теги: Не выбрано</span></p>
         <p>
-          <select class="select-tag" id = "select-tag">
+          <select class="select-tag" id="select-tag">
             <option>Добавить тег</option>
           </select>
-          <button class="clear">сброс</button>
+          <button class="add-tag" id="add-tag">добавить</button>
+          <button class="clear" id="clear-tags">сброс</button>
         </p>
         <p>
           По имени поставщика:
-          <select class="select-creator" id = "select-creator">
+          <select class="select-creator" id="select-creator">
             <option>Выберите поставщика</option>
           </select>
-          <button class="clear">сброс</button>
+          <button class="clear" id="clear-creators">сброс</button>
         </p>
       </div>
 
-      <template id="advertisement-template" >
-        <div class = "advertisement">
+      <template id="advertisement-template">
+        <div class="advertisement">
           <div class="advertisement-picture">
-            <img class="picture"
-              height="250px"
-              width="180px"
-            />
+            <img class="picture" height="250px" width="180px" />
           </div>
-  
-            <div class="information">
-              <div class="advertisement-title"></div>
-              <div class="tags"></div>
-              <p class = "vendor"></p>
-              <p class = "description"></p>
-              <br />
-              <p>Скидка: <span class="discount"></span></p>
-              <br />
-              <p class = "link"></p>
-              <p class = "rating"></p>
-              <p class = "created-date"></p>
-              <span class="until"></span>
-            </div>
-  
-            <div class="under-advertisement">
-              <button class="edit">Редактировать</button>
-              <button class="delete" id = "delete">Удалить</button> 
-              <button class="leave-review" id = "leave-review">Оставить отзыв</button>
-              <h1>Отзывы</h1>
-            </div>
-  
-            <div class="reviews">
+
+          <div class="information">
+            <div class="advertisement-title"></div>
+            <div class="tags"></div>
+            <p class="vendor"></p>
+            <p class="description"></p>
+            <br />
+            <p>Скидка: <span class="discount"></span></p>
+            <br />
+            <p class="link"></p>
+            <p class="rating"></p>
+            <p class="created-date"></p>
+            <span class="until"></span>
           </div>
-  </template>
 
-      <section class="advertisements" id = "advertisements">
-      </section>
+          <div class="under-advertisement">
+            <button class="edit" id="edit">Редактировать</button>
+            <button class="delete" id="delete">Удалить</button>
+            <button class="leave-review" id="leave-review">
+              Оставить отзыв
+            </button>
+            <h1>Отзывы</h1>
+          </div>
 
-      <button class="load-more" id = "load-more">Загрузить еще</button>
+          <div class="reviews"></div>
+        </div>
+      </template>
 
-      
+      <section class="advertisements" id="advertisements"></section>
+
+      <button class="load-more" id="load-more">Загрузить еще</button>
     </main>
 
     <footer>
@@ -101,10 +101,9 @@
         Created by Andrew Konovalov <br />2 course, 6 group,<br />
         don.andrew241@gmail.com
       </span>
-      <span class="title-footer">Title</span>
+      <span class="title-footer">Profit!</span>
       <span class="last-update">Last change:<br />19.04.2021</span>
     </footer>
-
   </body>
-  <script src="script.js"></script>
+  <script src="resources/js/script.js"></script>
 </html>
