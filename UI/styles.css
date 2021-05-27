@@ -2,11 +2,10 @@ header {
   background-color: #b5f2ea;
   height: 90px;
   font-size: 1.8em;
-  margin: 0;
-}
+  }
 
 body {
-  margin: 0;
+ margin:0;
 }
 
 header .logo {
@@ -43,8 +42,8 @@ header .authorization {
 .add-advertisement {
   font-size: 1.2em;
   float: right;
-  margin-right: 22.5%;
   margin-top: 3%;
+  margin-right:2.5%;
 }
 
 .sort {
@@ -115,12 +114,13 @@ header .authorization {
   font-size: 1em;
   margin-top: 0.1%;
   padding-top: 3%;
-  outline: 2px solid #000;
+  outline: 2px solid rgb(0, 0, 0);
 }
 
 .advertisement-picture {
   float: left;
   padding-left: 3%;
+  margin-right: 0%;
 }
 
 .advertisement-title {
@@ -129,6 +129,10 @@ header .authorization {
   font-weight: bold;
 }
 
+.no-advertisements{
+  font-weight: bold;
+  margin-left: 40%;
+}
 .information {
   font-size: 1em;
   margin-left: 200px;
@@ -198,10 +202,11 @@ header .authorization {
 
 .review {
   outline: 2px solid #000;
-  padding-bottom: 1%;
+  padding-bottom: 5%;
   margin-top: 0.1%;
   padding-top: 1%;
   padding-left: 1%;
+  font-size: 1.1em;
 }
 
 .leave-review:hover {
@@ -217,6 +222,15 @@ header .authorization {
   float: right;
 }
 
+.username {
+float:left;
+font-weight: bold;
+}
+
+.review-text{
+  float:left;
+  margin-left:5px;
+}
 .delete-review:hover {
   color: grey;
 }
@@ -229,7 +243,7 @@ h1 {
 
 .load-more {
   font-size: 1.2em;
-  margin-left: 38%;
+  margin-left: 40%;
   margin-top: 1%;
   background: 0%;
   border: none;
@@ -241,14 +255,16 @@ h1 {
 
 footer {
   background-color: rgb(128, 199, 240);
-  margin-top: 2%;
-  padding-bottom: 100px;
+  margin-top: 3%;
+
+  padding-bottom:100px;
   font-size: 1.2em;
+  width:100%;
 }
 
 footer .personal-information {
   float: left;
-  font-size: 1em;
+  font-size: 0.8em;
   padding-top: 1%;
   padding-left: 1%;
   padding-bottom: 1%;
@@ -258,7 +274,7 @@ footer .title-footer {
   font-size: 1.8em;
   float: left;
   margin-top: 2%;
-  margin-left: 25%;
+  margin-left: 30%;
 }
 
 footer .last-update {
@@ -269,8 +285,22 @@ footer .last-update {
 }
 
 main {
+
   font-size: 1em;
   margin-top: 6%;
-  margin-left: 22.5%;
+  min-height: 100%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+@media (min-width: 1000px) {
+main{
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+  }
+
+.add-advertisement{
   margin-right: 22.5%;
+}
+
 }
